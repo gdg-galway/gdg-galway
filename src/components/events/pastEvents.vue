@@ -101,6 +101,7 @@
 <script>
 import ChapterDetails from "@/assets/data/chapterDetails.json";
 import { MeetupAPI } from "@/config/key";
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -113,12 +114,14 @@ export default {
       notFoundPastEventFlag: false
     };
   },
+  computed: {
+    ...mapGetters({
+      functions: "functions"
+    })
+  },
   created() {
-    fetch(
-      "https://cors-anywhere.herokuapp.com/https://api.meetup.com/" +
-        MeetupAPI.urlname +
-        "/events?desc=true&photo-host=public&page=8&status=past&sign=true"
-    )
+    this.functions
+      .httpsCallable("getEvents")({ type: "past" })
       .then(data => data.json())
       .then(res => {
         if (res.length > 0) {
