@@ -122,7 +122,6 @@ export default {
   created() {
     this.functions
       .httpsCallable("getEvents")({ type: "past" })
-      .then(data => data.json())
       .then(res => {
         if (res.length > 0) {
           this.showLoader = false;

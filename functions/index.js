@@ -2,11 +2,11 @@ const functions = require('firebase-functions');
 const request = require('request-promise-native');
 
 exports.getEvents = functions.https.onCall(async data => {
-    let url = `https://api.meetup.com/Google-Developers-Group-in-Galway-Meetup/events?key=2d5477004812804075381a7b71583b`;
+    let url = `https://api.meetup.com/Google-Developers-Group-in-Galway-Meetup/events?sign=true`;
     const {type} = data || {};
-    if(type === 'upcoming') url += '&page=3';
+    if(type === 'upcoming') url += '&photo-host=public&page=3&status=upcoming';
     else if(type === 'past') url += '&desc=true&photo-host=public&page=8&status=past';
-    else if(type === 'showcase') url += '&desc=true&photo-host=public&sign=true&page=4&status=past';
+    else if(type === 'showcase') url += '&desc=true&photo-host=public&page=4&status=past';
     try {
         const events = await request(url, { json: true });
         return { events };
