@@ -100,7 +100,6 @@
 
 <script>
 import ChapterDetails from "@/assets/data/chapterDetails.json";
-import { MeetupAPI } from "@/config/key";
 import { mapGetters } from "vuex";
 export default {
   data() {
@@ -122,7 +121,7 @@ export default {
   created() {
     this.functions
       .httpsCallable("getEvents")({ type: "past" })
-      .then(data => data.json())
+      .then(data => data.data.events)
       .then(res => {
         if (res.length > 0) {
           this.showLoader = false;
