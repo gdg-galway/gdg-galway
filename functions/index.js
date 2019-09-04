@@ -2,7 +2,7 @@ const functions = require('firebase-functions');
 const request = require('request-promise-native');
 
 exports.getEvents = functions.https.onCall(async data => {
-    let url = `https://api.meetup.com/Google-Developers-Group-in-Galway-Meetup/events`;
+    let url = `https://api.meetup.com/Google-Developers-Group-in-Galway-Meetup/events?`;
     const {type} = data || {};
     if(type === 'upcoming') url += '&page=3';
     else if(type === 'past') url += '&desc=true&photo-host=public&page=8&status=past';
