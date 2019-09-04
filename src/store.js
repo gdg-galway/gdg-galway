@@ -1,5 +1,17 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import firebase from "firebase/app";
+import "firebase/functions";
+
+firebase.initializeApp({
+  apiKey: "AIzaSyDX41xGjLJ_lvL7fdBEmlRfaHkAqDBJMvQ",
+  authDomain: "gdg-galway-24365.firebaseapp.com",
+  databaseURL: "https://gdg-galway-24365.firebaseio.com",
+  projectId: "gdg-galway-24365",
+  storageBucket: "",
+  messagingSenderId: "948204882669",
+  appId: "1:948204882669:web:850022d0ebd80072"
+});
 
 import firebase from "firebase/app";
 import "firebase/functions";

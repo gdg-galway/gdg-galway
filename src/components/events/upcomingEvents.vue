@@ -197,6 +197,7 @@
 import ChapterDetails from "@/assets/data/chapterDetails.json";
 import { MeetupAPI } from "@/config/key";
 import { mapGetters } from "vuex";
+
 export default {
   data() {
     return {
