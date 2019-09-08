@@ -18,6 +18,10 @@ The project is using VueJS (https://vuejs.org/) and Firebase (https://firebase.g
 
 Let's start coding :)
 
+## Web and WPA
+
+![](./src/assets/img/GDG-Galway-Website.png)
+
 ## Find us on
 
 - Discourse: https://forum.gdg-galway.com
