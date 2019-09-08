@@ -24,8 +24,9 @@ export default new Vuex.Store({
       { text: "Home", to: "/", icon: "home" },
       { text: "Events", to: "/events", icon: "rounded_corner" },
       { text: "Team", to: "/team", icon: "group" },
-      { text: "About", to: "/about", icon: "toc" },
-      { text: "Contact", to: "/contact", icon: "person" }
+      { text: "About", to: "/about", icon: "search" },
+      { text: "Contact", to: "/contact", icon: "person" },
+      { text: "Blog", to: "/blog", icon: "format_align_left" },
     ]
   },
   getters: {

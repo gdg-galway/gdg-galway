@@ -1,0 +1,46 @@
+<template>
+  <v-content class="pa-0">
+    <v-container fluid class="pt-3 mb-0 grey lighten-5">
+      <v-layout wrap align-center justify-center row fill-height class="my-0">
+        <v-flex xs12 md10 class="my-0">
+          <p
+            class="google-font mb-0"
+            style="font-size:200%;color:#0277bd"
+          >{{ChapterDetails.ChapterName}}'s Posts</p>
+        </v-flex>
+      </v-layout>
+    </v-container>
+
+    <v-container fluid class="grey lighten-5">
+      <v-layout wrap align-center justify-center row fill-height>
+        <v-flex xs12 md10 class>
+          <mediumPosts/>
+        </v-flex>
+      </v-layout>
+    </v-container>
+
+    <!-- <v-container fluid class>
+      <v-layout wrap align-center justify-center row fill-height>
+        <v-flex xs12 md10 class>
+          <pastEvents/>
+        </v-flex>
+      </v-layout>
+    </v-container>-->
+  </v-content>
+</template>
+
+<script>
+import ChapterDetails from "@/assets/data/chapterDetails.json";
+// import upcommingEvents from "@/components/events/upcomingEvents";
+import mediumPosts from "@/components/blog/mediumPosts";
+export default {
+  components: {
+    mediumPosts
+  },
+  data() {
+    return {
+      ChapterDetails: ChapterDetails
+    };
+  }
+};
+</script>
