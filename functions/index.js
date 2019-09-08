@@ -1,5 +1,7 @@
 const functions = require('firebase-functions');
 const request = require('request-promise-native');
+const rssParser = require('rss-parser');
+const rss = new rssParser();
 
 exports.getEvents = functions.https.onCall(async data => {
     let url = `https://api.meetup.com/Google-Developers-Group-in-Galway-Meetup/events?`;
@@ -18,10 +20,9 @@ exports.getEvents = functions.https.onCall(async data => {
 });
 
 exports.getPosts = functions.https.onCall(async () => {
-    let url = `https://jsonplaceholder.typicode.com/posts`;
     try {
-        const posts = await request(url, { json: true });
-        return { posts };
+        const feed = await rss.parseURL(`https://medium.com/feed/@gdggalway`);
+        return feed && Array.isArray(feed.items) ? feed.items : [];
     }
     catch(e) {
         console.log('MEDIUM_ERROR', e);

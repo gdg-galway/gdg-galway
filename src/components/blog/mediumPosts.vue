@@ -48,37 +48,39 @@
       </v-flex>
 
       <v-flex xs12 sm6 md4 lg4 v-for="(item,i) in postsData" :key="i">
-        <v-slide-y-reverse-transition>
-          <v-list two-line subheader v-show="showData" class="pa-2">
-            <v-list-tile
-              avatar
-              style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-top:0; border-left:0; border-right:0; border-bottom:1"
-            >
-              <v-list-tile-avatar>
-                <v-avatar color="grey lighten-2">
-                  <span class="google-font" style="width:100vh">{{getCharString(item.title)}}</span>
-                </v-avatar>
-              </v-list-tile-avatar>
+        <v-card
+          flat
+          class="ma-1 pa-1 my-0 elevation-0"
+          style="border-radius:7px;border:1px #ddd solid"
+        >
+          <v-card-title class="mb-0">
+            <div>
+              <p class="google-font mb-2" style="font-size:140%;color:#0277bd">{{ item.title }}</p>
+              <p class="google-font mt-2 mb-1">
+                <span
+                  v-html="$options.filters.summery(item['content:encoded'],180)"
+                  style="font-size:110%"
+                ></span>
+              </p>
+              <p class="google-font mt-1 mb-0" style="font-size:110%">
+                <v-icon>insert_invitation</v-icon>
+                {{ item.isoDate | dateFilter}}
+              </p>
+            </div>
+          </v-card-title>
 
-              <v-list-tile-content>
-                <v-list-tile-title class="google-font" style="color:#424242">{{ item.title }}</v-list-tile-title>
-                <!-- <v-list-tile-sub-title
-                  class="google-font"
-                >{{ item.local_date | dateFilter}} | {{ item.local_time }}</v-list-tile-sub-title>-->
-              </v-list-tile-content>
-
-              <v-list-tile-action>
-                <v-tooltip bottom>
-                  <v-btn icon ripple :href="item.link" target="_blank" slot="activator">
-                    <v-icon color="grey darken-1">info</v-icon>
-                  </v-btn>
-
-                  <span>See More about {{item.title}}</span>
-                </v-tooltip>
-              </v-list-tile-action>
-            </v-list-tile>
-          </v-list>
-        </v-slide-y-reverse-transition>
+          <v-card-actions class="mt-0">
+            <v-spacer></v-spacer>
+            <v-btn
+              flat
+              color="#4C4A78"
+              :href="item.link"
+              target="_blank"
+              class="mb-0 ml-0 mt-0 google-font"
+              style="border-radius:7px;text-transform: capitalize;"
+            >Read more</v-btn>
+          </v-card-actions>
+        </v-card>
       </v-flex>
 
       <v-flex xs12 v-if="notFoundPostsFlag==true">
@@ -113,7 +115,7 @@ export default {
   created() {
     this.functions
       .httpsCallable("getPosts")()
-      .then(data => data.data.posts)
+      .then(data => data.data)
       .then(res => {
         if (res.length > 0) {
           this.showLoader = false;
