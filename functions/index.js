@@ -16,3 +16,15 @@ exports.getEvents = functions.https.onCall(async data => {
         throw new functions.https.HttpsError('aborted', 'Could not fetch events from Meetup.');
     }
 });
+
+exports.getPosts = functions.https.onCall(async () => {
+    let url = `https://jsonplaceholder.typicode.com/posts`;
+    try {
+        const posts = await request(url, { json: true });
+        return { posts };
+    }
+    catch(e) {
+        console.log('MEDIUM_ERROR', e);
+        throw new functions.https.HttpsError('aborted', 'Could not fetch posts from Medium.');
+    }
+});
