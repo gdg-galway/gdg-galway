@@ -1,7 +1,7 @@
 {
   "ChapterName": "GDG Galway",
   "ChapterShortDescription": "Google Developers Group Galway is an initiative to concentrate the efforts of many developers in and around Galway to learn, share and get productive using the various Google products.",
-  "ChapterLongDec": "The Google Developers Group Galway is a community regrouping Tech aficionados based in our beautiful city of Galway, Ireland. We organize events focused on new technologies, Google products and services, but also workshops, competitions, and networking events. We invite people from all backgrounds and technical level to join our community on Twitter, Discord, and Meetup group! Disclaimer: GDG Galway is an independent group; our activities and the opinions expressed here should in no way be linked to the Google Corporation.",
+  "ChapterLongDec": "The Google Developers Group Galway is a community regrouping Tech aficionados based in our beautiful city of Galway, Ireland. We organize events focused on new technologies, Google products and services, but also workshops, competitions, and networking events. We invite people from all backgrounds and technical level to join our community on Twitter, Slack, Telegram and Meetup group! Disclaimer: GDG Galway is an independent group; our activities and the opinions expressed here should in no way be linked to the Google Corporation.",
   "ChapterMeetupLink": "https://www.meetup.com/en-AU/Google-Developers-Group-in-Galway-Meetup/",
   "ChapterEmail": "gdggalway@gmail.com",
   "website": "https://gdg-galway.com",
@@ -28,6 +28,11 @@
       "name": "Slack",
       "link": "https://join.slack.com/t/gdg-galway/shared_invite/enQtNzQ1NTE0OTgwMDcxLWY0ZWFiMjhiNDY5MzkyZGIwMTUxZWM4N2VkYTMzZWM4MjY2NTU4MjFhYmI3ZmExNGVhMGYzZDZhMmZmMzE4YzE",
       "icon": "fab fa-slack"
+    },
+    {
+      "name": "Telegram",
+      "link": "https://t.me/gdggalway",
+      "icon": "fab fa-telegram"
     }
   ],
   "aboutGDGProgram": "GDGs are local groups of developers who are specifically interested in Google products and APIs. Each local group is called a GDG chapter and can host a variety of technical activities for developers - from just a few people getting together to watch our latest videos, to large gatherings with demos and tech talks, to hackathons.",
