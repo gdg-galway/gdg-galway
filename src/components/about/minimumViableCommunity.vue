@@ -5,7 +5,7 @@
         <p class="google-font" style="font-size:180%;color:#0277bd">Minimum Viable Community</p>
         <a
           :target="'_blank'"
-          :href="chapterDetails.mvcLink"
+          :href="chapterDetails.minimumViableCommunityLink"
           class="google-font"
           style
         >GDG Galway Minimum Viable Community</a>

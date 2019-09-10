@@ -22,7 +22,7 @@
     <v-container fluid class="grey lighten-5 pt-5 pb-1">
       <v-layout wrap align-center justify-center row fill-height>
         <v-flex xs12 md10 class>
-          <mvc/>
+          <minimumViableCommunity/>
         </v-flex>
       </v-layout>
     </v-container>
@@ -57,21 +57,20 @@
 import ChapterDetails from "@/assets/data/chapterDetails.json";
 import aboutGDGChapter from "@/components/about/aboutGDGChapter";
 import contactInfo from "@/components/about/contactInfo";
-import mvc from "@/components/about/mvc";
+import minimumViableCommunity from "@/components/about/minimumViableCommunity";
 import coc from "@/components/about/coc";
 import AntiHarassmentPolicy from "@/components/about/AntiHarassmentPolicy";
 export default {
   components: {
     aboutGDGChapter,
     contactInfo,
-    mvc,
+    minimumViableCommunity,
     coc,
     AntiHarassmentPolicy
   },
   data() {
     return {
-      ChapterDetails: ChapterDetails,
-      eggs: ["easter", ["ArrowUp", "ArrowDown"]]
+      ChapterDetails: ChapterDetails
     };
   }
 };
