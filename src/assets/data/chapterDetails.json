@@ -33,8 +33,13 @@
       "name": "Telegram",
       "link": "https://t.me/gdggalway",
       "icon": "fab fa-telegram"
+    },
+    {
+      "name": "Medium",
+      "link": "https://medium.com/@gdggalway",
+      "icon": "fab fa-medium"
     }
   ],
   "aboutGDGProgram": "GDGs are local groups of developers who are specifically interested in Google products and APIs. Each local group is called a GDG chapter and can host a variety of technical activities for developers - from just a few people getting together to watch our latest videos, to large gatherings with demos and tech talks, to hackathons.",
-  "mvcLink": "https://docs.google.com/presentation/d/1I42om7qIMQnkA2-HEsQrJDLKaHC9mwIDH9ytLG95u7s/edit?usp=sharing"
+  "minimumViableCommunityLink": "https://docs.google.com/presentation/d/1I42om7qIMQnkA2-HEsQrJDLKaHC9mwIDH9ytLG95u7s/edit?usp=sharing"
 }
