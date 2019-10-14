@@ -15,7 +15,7 @@
           <p
             class="google-font mt-3 mb-0"
             style="font-size:110%"
-          >Our goal is to build a community of developers who are interested in development technologies including but not lmited to google products. Our Core Team is:</p>
+          >Our goal is to build a community of developers who are interested in development technologies including but not limited to Google products. Our Core Team is:</p>
         </v-flex>
       </v-layout>
     </v-container>
