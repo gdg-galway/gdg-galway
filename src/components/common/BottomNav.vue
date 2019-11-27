@@ -21,11 +21,6 @@
         <v-icon>search</v-icon>
       </v-btn>
 
-      <v-btn color="#518FF5" flat value="blog" router to="/blog">
-        <span>Blog</span>
-        <v-icon>format_align_left</v-icon>
-      </v-btn>
-
       <!-- <v-btn
         color="#518FF5"
         flat

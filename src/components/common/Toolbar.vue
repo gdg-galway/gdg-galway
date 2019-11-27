@@ -15,13 +15,6 @@
       flat
       @click="onClick($event, link)"
     >{{ link.text }}</v-btn>
-    <v-btn
-      :href="ChapterDetails.forum"
-      target="_blank"
-      class="ma-0 google-font elevation-1"
-      color="#1a73e8"
-      style="text-transform: capitalize;border-radius:5px;color:white"
-    >Visit our Forum</v-btn>
   </v-toolbar>
 </template>
 
